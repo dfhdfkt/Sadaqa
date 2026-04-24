@@ -1,13 +1,9 @@
-# 1. الاسم المعدل
-$Name = "محمد الطبلاوي"
-
-$HtmlContent = @"
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صدقة جارية - $Name</title>
+    <title>صدقة جارية - محمد الطبلاوي</title>
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #1b4332; --secondary: #2d6a4f; --bg: #f8f9fa; --white: #ffffff; }
@@ -46,7 +42,7 @@ $HtmlContent = @"
 
     <div class="header">
         <h1>صدقة جارية</h1>
-        <p>على روح المغفور له بإذن الله: <strong>$Name</strong></p>
+        <p>على روح المغفور له بإذن الله: <strong>محمد الطبلاوي</strong></p>
     </div>
 
     <nav class="nav-bar">
@@ -119,7 +115,7 @@ $HtmlContent = @"
     <a href="#" class="back-top">↑</a>
 
     <footer>
-        <p>صدقة جارية عن روح <strong>$Name</strong></p>
+        <p>صدقة جارية عن روح <strong>محمد الطبلاوي</strong></p>
         <p>اللهم اجعلها في ميزان حسناته ونوراً لقبره</p>
     </footer>
 
@@ -133,11 +129,3 @@ $HtmlContent = @"
 
 </body>
 </html>
-"@
-
-$Path = "$env:USERPROFILE\Desktop\index.html"
-$Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $True
-[System.IO.File]::WriteAllLines($Path, $HtmlContent, $Utf8NoBomEncoding)
-
-Start-Process $Path
-Write-Host "تم تحديث الصفحة بنجاح باسم محمد الطبلاوي!" -ForegroundColor Green
