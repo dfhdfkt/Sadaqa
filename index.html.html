@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صدقة جارية - فلان بن فلان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1b4332; --secondary: #2d6a4f; --bg: #f8f9fa; --white: #ffffff; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Cairo', sans-serif; background-color: var(--bg); color: #333; margin: 0; padding: 0; line-height: 1.8; scroll-behavior: smooth; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #1b4332 0%, #081c15 100%); color: white; text-align: center; padding: 80px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .header h1 { font-family: 'Amiri', serif; font-size: 3.5rem; margin: 0; }
+        
+        /* Navigation */
+        .nav-bar { sticky; top: 0; background: white; display: flex; justify-content: center; gap: 15px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); z-index: 1000; position: -webkit-sticky; position: sticky; }
+        .nav-bar a { text-decoration: none; color: var(--primary); font-weight: bold; font-size: 0.9rem; padding: 8px 15px; border-radius: 20px; transition: 0.3s; border: 1px solid transparent; }
+        .nav-bar a:hover { background: var(--primary); color: white; }
+
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Sections */
+        .section-title { text-align: center; margin: 60px 0 30px; color: var(--primary); font-family: 'Amiri', serif; font-size: 2.5rem; position: relative; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 3px; background: var(--secondary); margin: 10px auto; }
+        
+        .card { background: var(--white); border-radius: 15px; padding: 30px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 8px solid var(--primary); transition: 0.3s; }
+        .card:hover { transform: translateY(-3px); }
+        .quran-text { font-family: 'Amiri', serif; font-size: 1.8rem; color: #1b4332; text-align: center; line-height: 2.2; }
+        .surah-label { display: block; text-align: left; font-size: 0.9rem; color: #888; font-weight: bold; margin-top: 15px; }
+
+        .dua-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .dua-item { background: #fff; padding: 20px; border-radius: 12px; border-left: 4px solid var(--secondary); font-size: 1.1rem; color: #444; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+
+        /* Counters */
+        .counters-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+        .counter-card { background: #f0f4f2; padding: 25px; border-radius: 20px; text-align: center; border: 1px solid #dce5e2; }
+        .count-val { font-size: 3.5rem; font-weight: bold; color: var(--primary); margin: 10px 0; font-family: sans-serif; }
+        .count-btn { background: var(--primary); color: white; border: none; padding: 12px; width: 100%; border-radius: 12px; font-size: 1.2rem; cursor: pointer; font-family: 'Cairo'; box-shadow: 0 4px 10px rgba(27, 67, 50, 0.2); }
+        .count-btn:active { transform: scale(0.95); }
+
+        footer { text-align: center; padding: 60px 20px; background: #081c15; color: #fff; margin-top: 80px; }
+        .back-top { position: fixed; bottom: 20px; left: 20px; background: var(--primary); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1001; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>صدقة جارية</h1>
+        <p>على روح المغفور له بإذن الله: <strong>فلان بن فلان</strong></p>
+    </div>
+
+    <nav class="nav-bar">
+        <a href="#quran">القرآن الكريم</a>
+        <a href="#dua">الأدعية</a>
+        <a href="#tasbeeh">السبحة</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="quran">
+            <div class="section-title">سور من القرآن الكريم</div>
+            <div class="card">
+                <p class="quran-text">۞ قُلْ هُوَ اللَّهُ أَحَدٌ ۞ اللَّهُ الصَّمَدُ ۞ لَمْ يَلِدْ وَلَمْ يُولَدْ ۞ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ ۞</p>
+                <span class="surah-label">سورة الإخلاص</span>
+            </div>
+            <div class="card">
+                <p class="quran-text">۞ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۞ مِن شَرِّ مَا خَلَقَ ۞ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۞ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۞ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ۞</p>
+                <span class="surah-label">سورة الفلق</span>
+            </div>
+            <div class="card">
+                <p class="quran-text">۞ قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۞ مَلِكِ النَّاسِ ۞ إِلَٰهِ النَّاسِ ۞ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۞ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۞ مِنَ الْجِنَّةِ وَالنَّاسِ ۞</p>
+                <span class="surah-label">سورة الناس</span>
+            </div>
+        </section>
+
+        <section id="dua">
+            <div class="section-title">أدعية للمتوفى</div>
+            <div class="dua-grid">
+                <div class="dua-item">اللهمّ أبدله داراً خيراً من داره، وأهلاً خيراً من أهله، وأدخله الجنّة، وأعذه من عذاب القبر، ومن عذاب النّار.</div>
+                <div class="dua-item">اللهمّ عامله بما أنت أهله، ولا تعامله بما هو أهله. اللهمّ اجزه عن الإحسان إحساناً، وعن الإساءة عفواً وغفراناً.</div>
+                <div class="dua-item">اللهمّ إن كان محسناً فزد من حسناته، وإن كان مسيئاً فتجاوز عن سيّئاته. اللهمّ أدخله الجنّة من غير مناقشة حساب، ولا سابقة عذاب.</div>
+                <div class="dua-item">اللهمّ آنسه في وحدته، وفي وحشته، وفي غربته. اللهمّ أنزله منزلاً مباركاً، وأنت خير المنزلين.</div>
+                <div class="dua-item">اللهمّ أنزله منازل الصدّيقين، والشّهداء، والصّالحين، وحسُن أولئك رفيقاً.</div>
+                <div class="dua-item">اللهمّ اجعل قبره روضةً من رياض الجنّة، ولا تجعله حفرةً من حفر النّار.</div>
+                <div class="dua-item">اللهمّ افسح له في قبره مدّ بصره، وافرش قبره من فراش الجنّة.</div>
+                <div class="dua-item">اللهمّ أعذه من عذاب القبر، وجفاف ِالأرض عن جنبيها. اللهمّ املأ قبره بالرّضا، والنّور، والفسحة، والسّرور.</div>
+                <div class="dua-item">اللهمّ إنّه في ذمّتك وحبل جوارك، فقِهِ فتنة القبر، وعذاب النّار، وأنت أهل الوفاء والحقّ، فاغفر له وارحمه.</div>
+                <div class="dua-item">اللهمّ إنّه عبدك وابن عبدك، خرج من الدّنيا، وسعتها، ومحبوبها، وأحبّائه فيها، إلى ظلمة القبر، وما هو لاقيه.</div>
+                <div class="dua-item">اللهمّ إنّه كان يشهد أنّك لا إله إلّا أنت، وأنّ محمّداً عبدك ورسولك، وأنت أعلم به.</div>
+                <div class="dua-item">اللهمّ إنّا نتوسّل بك إليك، ونقسم بك عليك أن ترحمه ولا تعذّبه، وأن تثبّته عند السّؤال.</div>
+                <div class="dua-item">اللهمّ إنّه نَزَل بك وأنت خير منزولٍ به، وأصبح فقيراً إلى رحمتك، وأنت غنيٌّ عن عذابه.</div>
+                <div class="dua-item">اللهمّ آته برحمتك ورضاك، وقهِ فتنة القبر وعذابه، وآته برحمتك الأمن من عذابك حتّى تبعثه إلى جنّتك.</div>
+                <div class="dua-item">اللهمّ انقله من مواطن الدّود، وضيق اللّحود، إلى جنّات الخلود.</div>
+                <div class="dua-item">اللهمّ احمه تحت الأرض، واستره يوم العرض، ولا تخزه يوم يبعثون.</div>
+                <div class="dua-item">اللهمّ يمّن كتابه، ويسّر حسابه، وثقّل بالحسنات ميزانه، وثبّت على الصّراط أقدامه، وأسكنه في أعلى الجنّات بجوار حبيبك المصطفى.</div>
+                <div class="dua-item">اللهمّ أمّنه من فزع يوم القيامة، واجعل نفسه آمنةً مطمئنّةً، ولقّنه حجّته.</div>
+                <div class="dua-item">اللهمّ اجعله في بطن القبر مطمئنّاً، وعند قيام الأشهاد آمناً، وبجود رضوانك واثقاً.</div>
+                <div class="dua-item">اللهمّ انظر إليه نظرة رضا، فإنّ من تنظُر إليه نظرة رضاً لا تعذّبه أبداً.</div>
+            </div>
+        </section>
+
+        <section id="tasbeeh">
+            <div class="section-title">السبحة الإلكترونية</div>
+            <div class="counters-container">
+                <div class="counter-card">
+                    <p>اللهم صلِّ وسلم على نبينا محمد</p>
+                    <div class="count-val" id="c1">0</div>
+                    <button class="count-btn" onclick="add('c1')">صلِّ على النبي</button>
+                </div>
+                <div class="counter-card">
+                    <p>أستغفر الله العظيم</p>
+                    <div class="count-val" id="c2">0</div>
+                    <button class="count-btn" onclick="add('c2')">استغفار</button>
+                </div>
+                <div class="counter-card">
+                    <p>سُبْحانَ اللهِ وَبِحَمْدِهِ</p>
+                    <div class="count-val" id="c3">0</div>
+                    <button class="count-btn" onclick="add('c3')">تسبيح</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <a href="#" class="back-top">↑</a>
+
+    <footer>
+        <p>صدقة جارية عن روح <strong>فلان بن فلان</strong></p>
+        <p>اللهم تقبل منا ومنكم صالح الأعمال</p>
+    </footer>
+
+    <script>
+        function add(id) {
+            let e = document.getElementById(id);
+            e.innerText = parseInt(e.innerText) + 1;
+            if(navigator.vibrate) navigator.vibrate(40);
+        }
+    </script>
+
+</body>
+</html>
